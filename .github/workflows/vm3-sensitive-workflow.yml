@@ -1,0 +1,13 @@
+name: VM3 sensitive workflow
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inert:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo VM3_SENSITIVE_WORKFLOW_BASE
