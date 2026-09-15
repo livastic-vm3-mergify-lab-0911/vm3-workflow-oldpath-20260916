@@ -1,0 +1,15 @@
+name: VM3 workflow oldpath guard
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    name: vm3-workflow-oldpath-guard
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo VM3_WORKFLOW_OLDPATH_GUARD_OK
+
