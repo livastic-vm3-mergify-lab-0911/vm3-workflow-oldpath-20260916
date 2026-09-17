@@ -11,3 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo VM3_SENSITIVE_WORKFLOW_BASE
+
+# VM3 midflight permission TOCTOU inert marker 2026-09-17
