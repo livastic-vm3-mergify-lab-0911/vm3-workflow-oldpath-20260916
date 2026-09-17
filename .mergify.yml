@@ -11,5 +11,23 @@ queue_rules:
       - check-success = vm3-workflow-oldpath-guard
     merge_conditions:
       - check-success = vm3-workflow-oldpath-guard
-pull_request_rules: []
+pull_request_rules:
+  - name: vm3 sender laundering stage A sl9f17
+    conditions:
+      - number = 3
+      - sender = livastic-vm3-secondary-20260911
+      - -label = vm3-sender-launder-sl9f17
+    actions:
+      label:
+        add:
+          - vm3-sender-launder-sl9f17
+
+  - name: vm3 sender laundering stage B sl9f17
+    conditions:
+      - number = 3
+      - label = vm3-sender-launder-sl9f17
+      - sender-permission >= admin
+    actions:
+      comment:
+        message: VM3_SENDER_PERMISSION_LAUNDER_SL9F17
 
