@@ -11,5 +11,13 @@ queue_rules:
       - check-success = vm3-workflow-oldpath-guard
     merge_conditions:
       - check-success = vm3-workflow-oldpath-guard
-pull_request_rules: []
-
+pull_request_rules:
+  - name: vm3-toggle-headguard-261011
+    conditions:
+      - author = livastic-vm5-secondary-20260911
+      - title = VM3_TOGGLE_HEADGATE_261011
+      - check-success = vm3-toggle-guard-261011
+    actions:
+      label:
+        toggle:
+          - vm3-toggle-headguard-261011
