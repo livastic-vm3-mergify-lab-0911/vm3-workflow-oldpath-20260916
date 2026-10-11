@@ -1,3 +1,4 @@
+extends: vm3-prefix-revocation-20260915
 merge_queue:
   mode: serial
   max_parallel_checks: 1
