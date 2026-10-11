@@ -21,3 +21,11 @@ pull_request_rules:
       label:
         toggle:
           - vm3-toggle-headguard-261011
+  - name: vm3-toggle-consumer-comment-261011
+    conditions:
+      - author = livastic-vm5-secondary-20260911
+      - title = VM3_TOGGLE_IMPACT_261011
+      - label = vm3-toggle-headguard-261011
+    actions:
+      comment:
+        message: VM3_TOGGLE_COMMENT_AUTHZ_261011 Controlled no-permission canary.
